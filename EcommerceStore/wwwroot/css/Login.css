@@ -1,0 +1,99 @@
+﻿
+.flex {
+    display: flex;
+}
+
+.landing {
+    min-height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    background-image: url('../Material/Images/Untitled design.png');
+}
+
+.pad1 {
+    padding: 3rem;
+}
+
+.landing .container {
+    background-color: rgba(255,255,255,0.8);
+    width: fit-content;
+    border-radius: 1rem;
+    opacity: 0;
+    margin-top: 20rem;
+    backdrop-filter: blur(1px);
+    transition: 0.3s;
+}
+
+    .landing .container:hover {
+        border-bottom: #f03c02 solid 5px !important;
+        margin-bottom: 3rem !important;
+    }
+
+.bgtitle {
+    right: 30%;
+    top: 8%;
+    color: white;
+    font-size: 10rem;
+    opacity: 0.5;
+    text-transform: capitalize;
+    font-weight: bolder;
+    filter: blur(1px);
+}
+
+.landing .container h1 {
+    color: rgba(28, 23, 21, 0.7);
+}
+
+.landing .container form {
+    gap: 1rem;
+    padding: 1rem;
+}
+
+    .landing .container form .row {
+        column-gap: 1rem;
+    }
+
+.form-group {
+    padding: 0;
+}
+
+.btnsubmit {
+    background-color: #f03c02;
+    color: white;
+    border: #f03c02 1px solid;
+    transition: 0.3s;
+}
+
+    .btnsubmit:hover {
+        background-color: white;
+    }
+
+.landing .container i {
+    position: absolute;
+    left: 8%;
+    bottom: 8%;
+    color: #f03c02;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+    .landing .container i span {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .landing .container i:hover {
+        color: rgba(28, 23, 21, 0.7);
+        left: 5%;
+    }
+
+.alert {
+    background-color: #f03c02;
+    color: white;
+    border: #f03c02 1px solid;
+    transition: 0.3s;
+}
+
+    .alert:hover {
+        transform: scale(1.1);
+    }

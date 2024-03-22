@@ -1,0 +1,102 @@
+﻿body {
+    background-image: url('../Material/Landing.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+.navbar li {
+    padding: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar {
+    backdrop-filter: blur(5px) !important;
+    background-color: rgba(255,255,255,0.4) !important;
+    color: white !important;
+}
+
+    .navbar .navbar-brand {
+        font-size: 1.4rem;
+        margin-left: 3rem;
+        padding: 0.3rem;
+        color: white !important;
+        font-weight: bolder;
+        transition: 0.3s;
+    }
+
+        .navbar .navbar-brand:hover {
+            color: #ff586f !important;
+            background-color: white;
+        }
+
+.landing {
+    height: 100vh;
+    width: 100%;
+}
+
+    .landing .container {
+        height: 100%;
+        margin-left: 5rem;
+    }
+
+.flex {
+    display: flex;
+}
+
+.sec1 {
+    color: white;
+    opacity: 0;
+    margin-left: -10rem;
+}
+
+    .sec1 h1 {
+        letter-spacing: 0.3rem;
+        font-weight: bolder;
+        font-size: 4rem;
+    }
+
+    .sec1 button {
+        background-color: #ff586f;
+        color: white;
+        transition: 0.3s;
+        border: 1px solid white;
+        padding: 0.5rem 2rem;
+        margin-top: 1rem;
+    }
+
+        .sec1 button:hover {
+            transform: scale(1.2);
+            color: #ff586f;
+            background-color: white;
+            border: 1px solid #ff586f;
+        }
+
+        .sec1 button:focus {
+            outline: 0;
+        }
+
+
+@keyframes upper {
+    1% {
+        height: 66px;
+    }
+
+    100% {
+        height: 130px;
+    }
+}
+
+@keyframes lower {
+    0% {
+        height: 130px;
+    }
+
+    100% {
+        height: 66px;
+    }
+}

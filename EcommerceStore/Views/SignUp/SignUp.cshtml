@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/SignUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Aref+Ruqaa+Ink:wght@400;700&family=Cairo+Play:wght@300&family=Marhey&family=Roboto+Condensed:ital,wght@0,100;0,300;0,400;1,100;1,200;1,400;1,700;1,800;1,900&family=Vina+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="landing flex justify-content-center align-items-center">
+        <h1 class="position-absolute bgtitle">SignUp<br>NOW</h1>
+        <div class="container flex justify-content-center align-items-center  pad1 flex-column position-relative">
+            <h1 class="font-weight-bold">SignUp</h1>
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert" role="alert">
+                    User Already Exists
+                </div>
+            }
+            <a asp-action="Login" asp-controller="SignUp"><i class="fa-solid fa-arrow-left"></i></a>
+            <form asp-action="CreateUser" asp-controller="SignUp" class="d-grid">
+                <div class="row">
+                    <div class="col-lg-5 form-group">
+                        <label for="exampleInputEmail1">First Name</label>
+                        <input required="true" type="text" class="form-control" name="FullName" placeholder="ex: KarimKhaled..">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <label for="exampleInputPassword1">Phone no.</label>
+                        <input required="true" class="form-control" name="Phone" placeholder="ex: 01005498134">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-lg-5">
+                        <label name="Username" for="exampleInputPassword1">OnlineID(Username)</label>
+                        <input required="true" class="form-control" name="Username" placeholder="ex: Karim549..">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input required="true" name="Password" type="password" class="form-control" placeholder="*****">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-12">
+                        <label for="exampleInputPassword1">Email</label>
+                        <input name="Email" required="true" type="email" class="form-control" placeholder="Ex:Karimkhaled549@gmail.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 flex justify-content-center align-item-center ">
+                        <button type="submit" class="btn btnsubmit ">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/8741f503b5.js" crossorigin="anonymous"></script>
+    <script src="/js/SignUp.js"></script>
+
+</body>
+</html>

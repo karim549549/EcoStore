@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/Landing.css">
+    <title>Table #6</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="#">Eco Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex     justify-content-center" id="navbarNav">
+            <ul class="navbar-nav flex     justify-content-betwee">
+                <li class="nav-item active">
+                    <a class="nav-link" asp-action="Index" asp-controller="Home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Products">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Promotions</a>
+                </li>
+                @if (TempData["IsAdmin"] != null)
+                {
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Admin" class="nav-link" >Admin <span class="sr-only">(current)</span></a>
+                </li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <div class="landing ">
+        <div class="container  flex align-items-center">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-lg-6 sec1">
+                        <h1>Get Up To 30% <br> New Arrivals</h1>
+                        <div class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit tempora possimus quos temporibus adipisci iure, ducimus officiis! Perspiciatis sed nobis inventore facere tempore</div>
+                        <a asp-action="Index" asp-controller="Products"><button>Shop Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/8741f503b5.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="~/js/Landing.js"></script>
+</body>
+</html>

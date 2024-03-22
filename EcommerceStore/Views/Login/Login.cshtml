@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Aref+Ruqaa+Ink:wght@400;700&family=Cairo+Play:wght@300&family=Marhey&family=Roboto+Condensed:ital,wght@0,100;0,300;0,400;1,100;1,200;1,400;1,700;1,800;1,900&family=Vina+Sans&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="landing flex justify-content-center align-items-center">
+        <h1 class="position-absolute bgtitle">Login<br>NOW</h1>
+        <div class="container flex justify-content-center align-items-center  pad1 flex-column position-relative">
+            <h1 class="font-weight-bold">Login</h1>
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert " role="alert">
+                    Username Or Password InCorrect
+                </div>
+             }
+  
+            <a asp-action="SignUp" asp-controller="Login"><i class="fa-solid fa-arrow-left"><span>Sign up</span></i></a>
+            <form asp-action="Login" asp-controller="Login" class="d-grid">
+                <div class="row">
+                    <div class="col-lg-12 form-group">
+                        <label for="exampleInputEmail1">UserName</label>
+                        <input required="true" type="text" class="form-control" name="Username" placeholder="ex: Karim..">
+                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="form-group col-lg-12">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input required="true" name="Password" type="password" class="form-control" placeholder="*****">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 flex justify-content-center align-item-center ">
+                        <button type="submit" class="btn btnsubmit ">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/8741f503b5.js" crossorigin="anonymous"></script>
+    <script src="js/Signup.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
